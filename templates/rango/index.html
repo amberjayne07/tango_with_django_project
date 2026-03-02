@@ -9,6 +9,13 @@ Homepage
 <h1>Welcome to Rango!</h1>
 
 <div>
+    {% if user.is_authenticated %}
+        howdy {{ user.username }}!
+    {% else %}
+        hey there partner!
+    {% endif %}
+<div/>
+<div>
     <strong>{{ boldmessage }}</strong>
 </div>
 
